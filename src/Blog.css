@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Kode+Mono:wght@400..700&family=Geist+Mono:wght@100..900&display=swap');
+
+  
+.blog-section {
+  padding: 6rem 2rem;
+  padding-bottom: 10rem;
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.section-title {
+  font-family: "Space Mono", monospace !important;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #909090;
+}
+
+.category-filters {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.category-filter {
+  font-family: "Kode Mono", monospace;
+  background: none;
+  border: none;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.category-filter:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.category-filter.active {
+  color: white;
+  background: rgba(35, 35, 35, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 40px rgba(229, 83, 128, 0.5);
+  cursor: pointer;
+  border: solid 1px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(35, 35, 35, 0.9), rgba(35, 35, 35, 0.9)), 
+                    linear-gradient(45deg, #f09433 0%, #e6683c 20%, #dc2743 40%, #cc2366 60%, #bc1888 80%, #7b3fff 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  background: rgba(35, 35, 35, 0.5);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  overflow: visible;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.blog-card::before, .blog-card::after {
+  display: none;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  color: white;
+  background: rgba(35, 35, 35, 0.9);
+  box-shadow: 0 5px 40px rgba(229, 83, 128, 0.3);
+  cursor: pointer;
+  border: solid 1px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(30, 30, 30), rgba(30, 30, 30)), 
+                    linear-gradient(45deg, #f09433 0%, #e6683c 20%, #dc2743 40%, #cc2366 60%, #bc1888 80%, #7b3fff 100%);
+  background-size: 200% 100%;
+  animation: gradientShift 8s ease infinite;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  z-index: 2;
+}
+
+.blog-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  margin: 1px 1px 0 1px;
+  z-index: 1;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
+}
+
+.category-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.75rem;
+  font-family: "Kode Mono", monospace;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.blog-card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 1px 1px 1px;
+  z-index: 1;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #a0a0a0;
+
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  font-family: "Kode Mono", monospace;
+  text-transform: uppercase;
+}
+
+.blog-card h3 {
+  font-family: "Space Mono", monospace !important;
+  font-size: 1.25rem;
+  color: #909090;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.blog-card p {
+  color: #a0a0a0;
+  margin-bottom: 0;
+  line-height: 1.6;
+  font-size: 0.875rem;
+  font-family: "Kode Mono", monospace;
+  flex: 1;
+}
+
+.read-more {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-family: 'Kode Mono', monospace;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  position: relative;
+  z-index: 5;
+}
+
+.read-more-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Style for the text with gradient */
+.read-more-content span {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 20%, #dc2743 40%, #cc2366 60%, #bc1888 80%, #7b3fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: gradientShift 8s ease infinite;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Style for the arrow SVG specifically */
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  color: #909090;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/* Add animation to the gradient in the SVG */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.blog-card:hover .read-more-content {
+  gap: 1rem;
+}
+
+.blog-card:hover .arrow-icon {
+  transform: translateX(5px);
+  color: white;
+  filter: drop-shadow(0 0 5px rgba(229, 83, 128, 0.3));
+}
+
+.blog-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.blog-card-link:hover .blog-card {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 40px rgba(229, 83, 128, 0.3);
+  border: solid 1px transparent;
+  background-image: linear-gradient(rgba(30, 30, 30), rgba(30, 30, 30)), 
+                    linear-gradient(45deg, #f09433 0%, #e6683c 20%, #dc2743 40%, #cc2366 60%, #bc1888 80%, #7b3fff 100%);
+  background-size: 200% 100%;
+  animation: gradientShift 8s ease infinite;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 4rem 1rem;
+    padding-bottom: 6rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .category-filters {
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .blog-card-image {
+    height: 180px;
+  }
+
+  .blog-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .blog-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-filter {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}

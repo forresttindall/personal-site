@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCGRB0M80T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KCGRB0M80T');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Umami Analytics -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="e86c6ef8-cc30-4188-ac54-62dccb31d9b0"></script>
+
+    <!-- Primary Meta Tags -->
+    <title>Forrest's Website</title>
+    <meta name="title" content="Forrest's Website"/>
+    <meta name="description" content="Forrest Tindall's Projects and Blog - Frontend Engineer crafting engaging digital experiences"/>
+    <meta name="keywords" content="frontend development, software engineering, web design, React, JavaScript"/>
+    <meta name="author" content="Forrest Tindall"/>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://www.4est.io/images/favicon.ico">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.4est.io"/>
+    <meta property="og:title" content="Forrest's Website"/>
+    <meta property="og:description" content="Forrest Tindall's Projects and Blog - Frontend Engineer crafting engaging digital experiences"/>
+    <meta property="og:image" content="https://www.4est.io/images/socialshare2.jpg"/>
+    <meta property="og:image:secure_url" content="https://4est.io/images/socialshare2.jpg"/>
+    <meta property="og:image:type" content="image/jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="https://4est.io"/>
+    <meta name="twitter:title" content="Forrest's Website"/>
+    <meta name="twitter:description" content="Forrest Tindall's Projects and Blog - Frontend Engineer crafting engaging digital experiences"/>
+    <meta name="twitter:image" content="https://4est.io/images/socialshare2.jpg"/>
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0A0A0A"/>
+
+
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+
+    <script>
+        // Script to update meta tags based on URL
+        function updateMetaTags() {
+            const hash = window.location.hash.slice(2); // Remove #/ from hash
+            const articleId = hash.split('/')[1]; // Get article ID from URL
+
+            if (articleId) {
+                // Update Open Graph tags
+                document.querySelector('meta[property="og:title"]').content = 
+                    document.querySelector(`meta[name="article:${articleId}:og:title"]`).content;
+                document.querySelector('meta[property="og:description"]').content = 
+                    document.querySelector(`meta[name="article:${articleId}:og:description"]`).content;
+                document.querySelector('meta[property="og:image"]').content = 
+                    document.querySelector(`meta[name="article:${articleId}:og:image"]`).content;
+                
+                // Update Twitter tags
+                document.querySelector('meta[name="twitter:title"]').content = 
+                    document.querySelector(`meta[name="article:${articleId}:og:title"]`).content;
+                document.querySelector('meta[name="twitter:description"]').content = 
+                    document.querySelector(`meta[name="article:${articleId}:og:description"]`).content;
+                document.querySelector('meta[name="twitter:image"]').content = 
+                    document.querySelector(`meta[name="article:${articleId}:og:image"]`).content;
+            }
+        }
+
+        // Update meta tags on hash change
+        window.addEventListener('hashchange', updateMetaTags);
+        // Update meta tags on initial load
+        window.addEventListener('load', updateMetaTags);
+    </script>
+</head>
+<body>
+    <script>
+        (function(){
+            let redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+.links-section {
+  height: 100vh;
+  background: black;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.links-content {
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.profile-image {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 2rem;
+  color: white;
+  margin: 0 0 0.5rem;
+}
+
+.gradient-name {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 20%, #dc2743 40%, #cc2366 60%, #bc1888 80%, #7b3fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 100%;
+  animation: gradientShift 8s ease infinite;
+}
+
+.profile-bio {
+  font-family: 'Kode Mono', monospace;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin: 0 0 1rem;
+  text-align: left;
+}
+
+.links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.link-button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #909090;
+  font-family: 'Kode Mono', monospace;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  transition: border 0s ease;
+}
+
+.link-button:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 20%, #dc2743 40%, #cc2366 60%, #bc1888 80%, #7b3fff 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 30px rgba(204, 35, 102, 0.4);
+  border: none;
+  transform: scale(1.04);
+}
+
+
+.links-gradient {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  filter: blur(120px);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.links-gradient.left {
+  background: radial-gradient(circle, rgba(64, 116, 255, 0.7) 0%, transparent 70%);
+  top: -20%;
+  left: -20%;
+}
+
+.links-gradient.right {
+  background: radial-gradient(circle, rgba(193, 77, 255, 0.7) 0%, transparent 70%);
+  bottom: -20%;
+  right: -20%;
+}
+
+/* Reuse animations from Contact.css */
+@keyframes moveAndMorph {
+  0% {
+    top: -10%;
+    left: -10%;
+    transform: scale(1) rotate(0deg);
+    border-radius: 70% 30% 50% 70% / 60% 30% 70% 40%;
+  }
+  20% {
+    top: 80%;
+    left: 60%;
+    transform: scale(1.1) rotate(90deg);
+    border-radius: 30% 70% 70% 30% / 40% 60% 30% 70%;
+  }
+  40% {
+    top: 60%;
+    left: -20%;
+    transform: scale(0.9) rotate(180deg);
+    border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+  }
+  60% {
+    top: -30%;
+    left: 80%;
+    transform: scale(1.05) rotate(270deg);
+    border-radius: 80% 20% 50% 50% / 70% 30% 70% 30%;
+  }
+  80% {
+    top: 50%;
+    left: 50%;
+    transform: scale(0.95) rotate(360deg);
+    border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+    transform: scale(1) rotate(0deg);
+    border-radius: 70% 30% 50% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes moveAndRotate {
+  0% {
+    top: 110%;
+    right: -10%;
+    transform: rotate(0deg);
+  }
+  25% {
+    top: 50%;
+    right: 80%;
+    transform: rotate(90deg);
+  }
+  50% {
+    top: -20%;
+    right: 50%;
+    transform: rotate(180deg);
+  }
+  75% {
+    top: 30%;
+    right: -30%;
+    transform: rotate(270deg);
+  }
+  100% {
+    top: 110%;
+    right: -10%;
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .links-content {
+    width: 85%;
+    padding: 1.5rem;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-name {
+    font-size: 1.25rem;
+  }
+
+  .profile-bio {
+    font-size: 0.9rem;
+  }
+
+  .links-grid {
+    width: 100%;
+  }
+
+  .link-button {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}

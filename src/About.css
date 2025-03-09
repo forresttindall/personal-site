@@ -1,0 +1,180 @@
+
+
+
+.about-section {
+  padding: 6rem 2rem;
+  padding-bottom: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-header {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 2.5rem;
+  color: #909090;
+  margin-bottom: 2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-card h3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 20%, #dc2743 40%, #cc2366 60%, #bc1888 80%, #7b3fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 100%;
+  animation: gradientShift 8s ease infinite;
+}
+
+.about-card p {
+  font-family: 'Kode Mono', monospace;
+  color: #909090;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.focus-items {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.focus-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.focus-icon {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+.focus-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.focus-icon svg path,
+.focus-icon svg line,
+.focus-icon svg circle {
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: strokeGradient 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes strokeGradient {
+  0% { stroke: #f09433; }
+  10% { stroke: #e6683c; }
+  20% { stroke: #dc2743; }
+  30% { stroke: #cc2366; }
+  40% { stroke: #bc1888; }
+  50% { stroke: #7b3fff; }
+  60% { stroke: #bc1888; }
+  70% { stroke: #cc2366; }
+  80% { stroke: #dc2743; }
+  90% { stroke: #e6683c; }
+  100% { stroke: #f09433; }
+}
+
+.focus-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .about-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+  }
+
+  .hero-image-container {
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+}
+
+.hero-image-container {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 2rem;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-image-container {
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+}

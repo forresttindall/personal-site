@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+
+    <script>
+        const path = window.location.pathname.replace(/\/$/, ''); // Remove trailing slash
+
+        if (path === '/blog/atprotocol') {
+            document.head.innerHTML = `
+                <meta charset="utf-8">
+                <title>The AT Protocol: A New Hope for Social Media</title>
+                <meta property="og:title" content="The AT Protocol: A New Hope for Social Media" />
+                <meta property="og:description" content="The AT Protocol represents a paradigm shift in how we approach social media, offering a decentralized alternative to the current landscape." />
+                <meta property="og:image" content="https://4est.io/images/bluesky.jpg" />
+                <meta property="og:url" content="https://4est.io/blog/atprotocol" />
+                <meta property="og:type" content="article" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="The AT Protocol: A New Hope for Social Media" />
+                <meta name="twitter:description" content="The AT Protocol represents a paradigm shift in how we approach social media, offering a decentralized alternative to the current landscape." />
+                <meta name="twitter:image" content="https://4est.io/images/bluesky.jpg" />
+                <meta name="twitter:creator" content="4est.io" />
+                <meta http-equiv="refresh" content="0;url=/#${path}">
+            `;
+        } else if (path === '/blog/solution-paradox') {
+            document.head.innerHTML = `
+                <meta charset="utf-8">
+                <title>The Solution Looking for a Problem: A Tech Industry Paradox</title>
+                <meta property="og:title" content="The Solution Looking for a Problem: A Tech Industry Paradox" />
+                <meta property="og:description" content="The tech industry has mastered something peculiar - the ability to convince users they need something they don't." />
+                <meta property="og:image" content="https://4est.io/images/arc3.jpg" />
+                <meta property="og:url" content="https://4est.io/blog/solution-paradox" />
+                <meta property="og:type" content="article" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="The Solution Looking for a Problem: A Tech Industry Paradox" />
+                <meta name="twitter:description" content="The tech industry has mastered something peculiar - the ability to convince users they need something they don't." />
+                <meta name="twitter:image" content="https://4est.io/images/arc3.jpg" />
+                <meta name="twitter:creator" content="4est.io" />
+                <meta http-equiv="refresh" content="0;url=/#${path}">
+            `;
+        } else if (path === '/blog/open-source-revolution') {
+            document.head.innerHTML = `
+                <meta charset="utf-8">
+                <title>The Open Source Revolution: A Beacon of Hope in the Age of Surveillance Capitalism</title>
+                <meta property="og:title" content="The Open Source Revolution: A Beacon of Hope in the Age of Surveillance Capitalism" />
+                <meta property="og:description" content="In our world of rent and subscriptions, open source is a beacon of hope." />
+                <meta property="og:image" content="https://4est.io/images/beacon.jpg" />
+                <meta property="og:url" content="https://4est.io/blog/open-source-revolution" />
+                <meta property="og:type" content="article" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="The Open Source Revolution: A Beacon of Hope in the Age of Surveillance Capitalism" />
+                <meta name="twitter:description" content="In our world of rent and subscriptions, open source is a beacon of hope." />
+                <meta name="twitter:image" content="https://4est.io/images/beacon.jpg" />
+                <meta name="twitter:creator" content="4est.io" />
+                <meta http-equiv="refresh" content="0;url=/#${path}">
+            `;
+        } else {
+            window.location.replace('/');
+        }
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=/">
+    </noscript>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>
