@@ -10,8 +10,8 @@
 
 
 .links-content {
-  max-width: 600px;
-  width: 90%;
+
+  width: 100%;
   position: relative;
   z-index: 2;
   padding: 2rem;
@@ -21,11 +21,52 @@
   align-items: center;
 }
 
+.links-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 1200px;
+  text-align: center;
+  justify-content: center;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.copied-text {
+  font-family: 'Kode Mono', monospace;
+  padding: 0;
+  padding-top: 20px;
+  font-size: 0.8rem;
+  color: #4CAF50;
+  animation: fadeOut 2s forwards;
+  height: 20px; /* Set a fixed height */
+  visibility: hidden; /* Hide it by default */
+}
+
+.copied-text.visible {
+  visibility: visible; /* Show it when needed */
+}
+
+.spacer {
+  height: 40px;
+}
+
 .profile-section {
   text-align: center;
   margin-bottom: 1.5rem;
   width: 100%;
-  max-width: 400px;
+ 
 }
 
 .profile-image {
@@ -69,13 +110,6 @@
   text-align: left;
 }
 
-.links-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  width: 100%;
-  max-width: 400px;
-}
 
 .link-button {
   width: 100%;
@@ -103,8 +137,7 @@
 
 .links-gradient {
   position: absolute;
-  width: 600px;
-  height: 600px;
+
   filter: blur(120px);
   opacity: 0.1;
   pointer-events: none;
@@ -230,11 +263,10 @@
   height: 20px;
 }
 
-.links-container {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
+
+
+
+
 
 /* Add this to your Links.css file */
 
@@ -405,15 +437,3 @@
   }
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  70% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-.copied-text {
-  margin-left: 8px;
-  font-size: 0.8rem;
-  color: #4CAF50;
-  animation: fadeOut 2s forwards;
-}

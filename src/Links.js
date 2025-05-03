@@ -228,9 +228,6 @@ const Links = () => {
                     <FontAwesomeIcon icon={link.icon} style={{ color: '' }} size="lg" />
                   )}
                   {link.title}
-                  {link.walletAddress && copiedAddress === link.walletAddress && (
-                    <span className="copied-text">Copied!</span>
-                  )}
                 </a>
               ))}
           </div>
@@ -273,6 +270,13 @@ const Links = () => {
             </div>
           </div> 
         )}*/}
+          <div className="spacer"> 
+          {links.map((link) => link.walletAddress && copiedAddress === link.walletAddress && (
+            <span className={`copied-text ${copiedAddress ? 'visible' : ''}`} key={link.walletAddress}>
+              Wallet Address Copied!
+            </span>
+            ))}
+      </div>
       </div>
     </section>
   );
