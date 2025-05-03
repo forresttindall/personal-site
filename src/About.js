@@ -1,7 +1,16 @@
 import React from 'react';
+import { useEffect } from 'react';
 import './About.css';
 
 const About = () => {
+  
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  
+
   return (
     <section className="about-section">
       <svg width="0" height="0">
@@ -23,7 +32,7 @@ const About = () => {
         </div>
         
         <div className="hero-image-container">
-          <img src="/images/mearizona.jpg" alt="Forrest Tindall" className="hero-image" />
+          <img src="/images/me.jpg" alt="Forrest Tindall" className="hero-image" />
         </div>
 
         <div className="about-content">
@@ -60,7 +69,7 @@ const About = () => {
                       <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                     </svg>
                   </span>
-                  <p>Mastering Three.js and Ethers.js for creating immersive web3 experiences</p>
+                  <p>Mastering Three.js and Ethers.js for creating immersive web experiences</p>
                 </div>
                 <div className="focus-item">
                   <span className="focus-icon">

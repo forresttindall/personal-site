@@ -88,6 +88,8 @@ const Header = () => {
           </li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
+          
+          
           <li className="social-dropdown" ref={dropdownRef}>
             <button 
               className="dropdown-trigger"
@@ -102,6 +104,8 @@ const Header = () => {
             </button>
             {isDropdownOpen && (
               <div className="dropdown-menu">
+                
+                {/* Commenting out social links
                 <a 
                   href="https://www.threads.net/@4est.io"
                   target="_blank"
@@ -131,6 +135,7 @@ const Header = () => {
                   <FontAwesomeIcon icon={faBluesky} style={{ color: '#909090' }} size="lg" />
                   Bluesky
                 </a>
+                */}
 
                 <a 
                   href="https://www.linkedin.com/in/forrest-tindall/"
