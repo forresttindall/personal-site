@@ -5,6 +5,7 @@
     <title>The Solution Looking for a Problem: A Tech Industry Paradox</title>
     <meta name="description" content="The tech industry has mastered something peculiar - the ability to convince users they need something they don't." />
     
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://forresttindall.dev/blog/solution-paradox" />
@@ -19,12 +20,17 @@
     <meta name="twitter:image" content="https://forresttindall.dev/images/arc3.jpg" />
     <meta name="twitter:creator" content="Forresttindall.dev" />
 
-    <meta http-equiv="refresh" content="0;url=/blog/solution-paradox" />
+    <script>
+        // Store the URL to redirect to after the app loads
+        sessionStorage.setItem('redirect', window.location.pathname);
+        // Redirect to the root page to load the React app
+        window.location.replace('/');
+      </script>
+
 </head>
 <body>
-    <script>
-        window.location.replace('/blog/solution-paradox');
-    </script>
+  
+  
     <p>Redirecting to article...</p>
 </body>
 </html>
