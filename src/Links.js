@@ -137,7 +137,7 @@ const Links = () => {
     {
       title: "Website",
       url: "https://forresttindall.dev",
-      imageIcon: '/favicon.ICO',
+      imageIcon: '/favicon.ico',
     },
     {
       title: "GitHub",
@@ -175,7 +175,7 @@ const Links = () => {
       icon: faImages,
     },
     {
-      title: "Coffee",
+      title: "Buy Me A Coffee",
       url: "https://buymeacoffee.com/forresttindall",
       customIcon: <CustomCoffeeIcon />,
     },
@@ -232,6 +232,7 @@ const Links = () => {
               ))}
           </div>
         </div>
+
 
         {/* Crypto Wallet Modal
         {cryptoModalOpen && (

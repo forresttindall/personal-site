@@ -35,6 +35,7 @@
   max-width: 1200px;
   text-align: center;
   justify-content: center;
+  transform: translateX(20px);
 }
 
 @keyframes fadeOut {
@@ -70,11 +71,13 @@
 }
 
 .profile-image {
-  width: 96px;
-  height: 96px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 1.5rem;
+  
+  margin: 0 auto 0.5rem;
+  margin-top: 30px;
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -106,7 +109,7 @@
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.5;
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   text-align: left;
 }
 
