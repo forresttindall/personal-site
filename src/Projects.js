@@ -7,6 +7,15 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Vorb - a lightning-fast, static site template.",
+      description: "Vorb is a lightning-fast, minimalist static site template built with React and Vite, powered by the Bun runtime.",
+      image: "/images/vorb.jpg",
+      technologies: ["Typescript", "Bun", "Vite", "React"],
+      categories: ["open source", "web"],
+      github: "https://github.com/forresttindall/vorb",
+      featured: true
+    },
+    {
       title: "ClearFeed - Open Source RSS Feed Reader",
       description: "ClearFeed is an open source RSS feed reader that allows users to read and manage their RSS feeds in a clean and intuitive interface.",
       image: "/images/clearfeed2.png",
@@ -53,18 +62,9 @@ const Projects = () => {
       github: "https://github.com/forresttindall/photography-portfolio",
     },
     {
-      title: "Life Left",
-      description: "A simple app with big impact. A calculator that estimates the percentage of your life left to live in real time.",
-      image: "/images/lifeleftgray.png",
-      technologies: ["JavaScript", "HTML", "CSS"],
-      categories: ["web"],
-      link: "https://forresttindall.github.io/Life-Left/",
-      github: "https://github.com/forresttindall/Life-Left",
-    },
-    {
         title: "GitHub Activity Calendar",
         description: "The GitHub Activity Calendar is a JavaScript library that generates a visual representation of a user's GitHub activity calendar.",
-        image: "/images/new-github-calendar2.png",
+        image: "/images/githubactivity.jpg",
         technologies: ["JavaScript", "APIs"],
         categories: ["web", "design", "open source"],
         link: "https://forresttindall.github.io/Github-Activity-Calendar/",
