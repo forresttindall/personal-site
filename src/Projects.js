@@ -7,7 +7,7 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Vorb - a lightning-fast, static site template.",
+      title: "Vorb - a lightning-fast tech stack for static websites.",
       description: "Vorb is a lightning-fast, minimalist static site template built with React and Vite, powered by the Bun runtime.",
       image: "/images/vorb.jpg",
       technologies: ["Typescript", "Bun", "Vite", "React"],
